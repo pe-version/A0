@@ -53,8 +53,10 @@ microservices-jan-2026/
 docker-compose up
 ```
 This pulls pre-built images from Docker Hub:
-- `hiphophippo/iot-python-service:latest`
-- `hiphophippo/iot-go-service:latest`
+- `hiphophippo/iot-python-service:a0`
+- `hiphophippo/iot-go-service:a0`
+
+> **Note:** Images are tagged with `:a0` to ensure graders see exactly the version submitted for this assignment. The `:a0` tag is immutable, whereas `:latest` may change as work continues on future assignments.
 
 ### Build from Source
 ```bash
@@ -208,3 +210,4 @@ Most of this worked pretty well. The initial files were pretty boilerplate (I re
 
 Some of the Go syntax was new to me: I needed to learn how it worked and what it meant.
 I also decided to add a Sensor class to the Python after reflection for greater robustness even though this light application doesn't really necessitate it.
+Another thing I learned is that when adding tags to the Docker containers, "latest" is unstable and bad practice for any sort of submission (and I would imagine especially production), as I will continue to modify things for future assignments (and, if in a commercial application, future versions). I suppose it didn't occur to me that "latest" is what the AI would initially recommend. I continue to learn to question more and more things, even as I thought I questioned some things well enough. There are many little lessons buried in these tasks.

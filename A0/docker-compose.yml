@@ -1,6 +1,6 @@
 services:
   python-service:
-    image: hiphophippo/iot-python-service:latest
+    image: hiphophippo/iot-python-service:a0
     build:
       context: ./python-service
       dockerfile: Dockerfile
@@ -17,7 +17,7 @@ services:
       retries: 3
 
   go-service:
-    image: hiphophippo/iot-go-service:latest
+    image: hiphophippo/iot-go-service:a0
     build:
       context: ./go-service
       dockerfile: Dockerfile
